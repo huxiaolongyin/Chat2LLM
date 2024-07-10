@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "D:/code/Chat2LLM"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "D:/code/Chat2LLM"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "D:/code/Chat2LLM"
+    }
+}
