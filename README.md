@@ -18,14 +18,26 @@
 
 - 语音识别：whisper
 - 大模型：基于ollama的llama3
-- 大模型交互：langchain
+- 大模型交互：langchain/TaskingAI
 - 知识数据库：MongoDB(拟定)
 - api服务：Fastapi
-- 知识图谱：待定
+- 知识图谱：待定(这个可能不是顺手就可以实现的，原理有点不同)
 - 后端系统：Django(拟定)
 - 管理数据：SQLite or Mysql
 - 前端：Vue(拟定)
 - 语音服务：edge-tts
+
+# 文件结构
+```powershell
+├─api # 提供api服务
+├─embedding # 知识文件向量化
+├─llms # llms对话处理
+├─messages # 消息存储
+├─prompts # 提示词
+├─retriever # 检索
+├─vectorstore # 向量库存储
+├─voice2text # 语音转文字
+```
 
 # 开发计划
 ## 实现语音交互的知识库问答服务

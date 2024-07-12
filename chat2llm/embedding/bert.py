@@ -1,6 +1,7 @@
 from chat2llm.embedding.base import BaseEmbedding
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 
+
 class BertEmbedding(BaseEmbedding):
     def __init__(self):
         self._model_name = "D:/code/BigModel/bert-base-chinese"
@@ -8,9 +9,11 @@ class BertEmbedding(BaseEmbedding):
         self._model_kwargs = {"device": _device}
         self._encode_kwargs = {"normalize_embeddings": True}
 
-
     def load_web(self, url, classes: list):
         return super().load_web(url, classes)
+
+    def load_text(self):
+        pass
 
     def vectorstore(self, docs):
         hf = HuggingFaceBgeEmbeddings(
@@ -19,7 +22,6 @@ class BertEmbedding(BaseEmbedding):
             encode_kwargs=self._encode_kwargs,
         )
         return super().vectorstore(docs, hf)
-
 
     def load_vectorstore(self):
         hf = HuggingFaceBgeEmbeddings(
